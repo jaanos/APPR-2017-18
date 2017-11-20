@@ -4,8 +4,18 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2017/18
 
 ## Tematika
 
-Izbrali si boste temo, s katero se bo vaš projekt ukvarjal. Tukaj boste
-napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
+Odločila sem se, da bom analizirala slovenske košarkaše in evropska košarkaška prvenstva. Za to temo sem se odločila, saj me košarka že od vedno zanima, letos pa smo postali še evropski prvaki. Podatke sem dobila na:
+* https://basketball.realgm.com/info/birth-cities/288/
+* https://en.wikipedia.org/wiki/EuroBasket
+
+Prva povezava vsebuje podatke o slovenskih košarkaših in ti podatki bodo vsebovani v prvi tabeli. Vsaka vrstica bo dodeljena enemu igralcu, v stolpcih pa bodo njegovi podatki o:
+* poziciji, ki jo igra
+* višini
+* datumu rojstva
+* kraju rojstva
+* ekipi, v kateri igra
+
+Druga tabela pa se bo nanašala na evropska prvenstva. Po vrsticah bodo leta evropskih prvenstev, vse od začetka leta 1935, pa do letošnjega prvenstva (2017). Vrstice bodo vsebovale državo v kateri se je evropsko prvenstvo izvajalo, potem pa še za vsako leto države, ki so osvojile prvo, drugo, tretje in četrto mesto. 
 
 ## Program
 
