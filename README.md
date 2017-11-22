@@ -4,7 +4,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2017/18
 
 ## Analiza izbranih držav glede na prevladujočo državno religijo
 
-V svoji projektni nalogi bom preučila vplive šestih svetovnih religij na sedem izbranih držav, pri čemer bo ena od držav zastopala neverujoče. Ker so gospodarstva držav, njihov razvoj ter uspešnost v svetu odvisna predvsem od drugih dejavnikov (npr. od zgodovine naroda, osamosvojitve države, naravnogeografske lege, naravnih virov, ...), se bom bolj osredotočila na populacijo in njene značilnosti.
+V svoji projektni nalogi bom preučila vplive šestih svetovnih religij na sedem izbranih držav, pri čemer bo ena od držav zastopala neverujoče. Ker so gospodarstva držav, njihov razvoj ter uspešnost v svetu odvisna predvsem od drugih dejavnikov (npr. od zgodovine naroda, osamosvojitve države, naravnogeografske lege, naravnih virov, ...), se bom bolj osredotočila na populacijo in njene značilnosti, ki so bolj odvisne od državne religije.
 
 Države, ki jih bom preučevala, sem izbrala tako, da v čim večji meri zastopajo določeno religijo oz. čim večji delež prebivalstva pripada tej veri. Tako sem kot predstavnico katolištva izbrala Italijo, protestantizma Veliko Britanijo, pravoslavcev Romunijo, islam zastopa Iran, hinduizem seveda Indija in budizem Tajska. Kot predstavnico neverujočih sem določila Kitajsko, saj se je po raziskavi iz leta 2014 kar 90 % prebivalstva opredelilo kot ateist ali neverujoči.
 
@@ -13,14 +13,12 @@ Vplive religij bom analizirala skozi naslednje indikatorje:
 * izobrazba
 * revščina
 * ločitve
-* migracije
 * BDP per capita po kupni moči
 
 Viri tabel
 * rodnost, izobrazba, BDP: http://databank.worldbank.org/data/reports.aspx?Code=NY.GDP.PCAP.CD&id=1ff4a498&report_name=Popular-Indicators&populartype=series&ispopular=y
 * revščina: https://ourworldindata.org/extreme-poverty/#the-evolution-of-extreme-poverty-country-by-country, http://ec.europa.eu/eurostat/tgm/table.do?tab=table&init=1&language=en&pcode=t2020_50&plugin=1
 * ločitve: https://en.wikipedia.org/wiki/Divorce_demography
-* migracije: http://world-statistics.org/index-res.php?code=SM.POP.NETM?name=Net%20migration#top-result
 
 ## Program
 
