@@ -17,6 +17,8 @@ Prva povezava vsebuje podatke o slovenskih košarkaših in ti podatki bodo vsebo
 
 Druga tabela pa se bo nanašala na evropska prvenstva. Po vrsticah bodo leta evropskih prvenstev, vse od začetka leta 1935, pa do letošnjega prvenstva (2017). Vrstice bodo vsebovale državo v kateri se je evropsko prvenstvo izvajalo, potem pa še za vsako leto države, ki so osvojile prvo, drugo, tretje in četrto mesto. 
 
+Tretja tabela bo po vrsticah imela vsako državo, ki je prejela na evropskem prvenstvu medaljo, v stolpcih pa bo pisalo koliko zlatih, srebnih ali bronastih je dobila. S pomočjo te tabele bom tudi naredila graf/zemljevid, kjer bom označila katere države so v zgodovini prejele največ medalj. 
+
 ## Program
 
 Glavni program in poročilo se nahajata v datoteki `projekt.Rmd`. Ko ga prevedemo,
