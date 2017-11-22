@@ -18,7 +18,7 @@ Vplive religij bom analizirala skozi naslednje indikatorje:
 Viri tabel
 * rodnost, izobrazba, BDP: http://databank.worldbank.org/data/reports.aspx?Code=NY.GDP.PCAP.CD&id=1ff4a498&report_name=Popular-Indicators&populartype=series&ispopular=y
 * revščina: https://ourworldindata.org/extreme-poverty/#the-evolution-of-extreme-poverty-country-by-country, http://appsso.eurostat.ec.europa.eu/nui/submitViewTableAction.do
-* ločitve: https://en.wikipedia.org/wiki/Divorce_demography
+* ločitve: https://en.wikipedia.org/wiki/Divorce_demographyhttp://appsso.eurostat.ec.europa.eu/nui/submitViewTableAction.do
 
 ## Program
 
