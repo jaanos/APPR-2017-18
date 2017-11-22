@@ -9,6 +9,7 @@ Odločila sem se, da bom analizirala slovenske košarkaše na letošnjem evropsk
 * https://en.wikipedia.org/wiki/EuroBasket
 
 Prva povezava vsebuje podatke o slovenskih košarkaših, ki so nas zastopali na letošnjem evropskem prvenstvu (2017) in ti podatki bodo vsebovani v prvi tabeli. Vsaka vrstica bo dodeljena enemu igralcu, v stolpcih pa bodo njegovi podatki o:
+* številka dresa
 * poziciji, ki jo igra
 * višini
 * datumu rojstva
