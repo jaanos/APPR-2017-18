@@ -6,7 +6,7 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2017/18
 
 Odločila sem se, da bom analizirala slovenske košarkaše na letošnjem evropskem prvenstvu in evropska košarkaška prvenstva. Za to temo sem se odločila, saj me košarka že od vedno zanima, letos pa smo postali še evropski prvaki. Podatke sem dobila na:
 * http://www.kzs.si/tekmovanja-in-projekti/reprezentance/clani/zgodovina/2017/
-* https://en.wikipedia.org/wiki/EuroBasket
+* https://sl.m.wikipedia.org/wiki/Evropsko_prvenstvo_v_košarki
 
 Prva povezava vsebuje podatke o slovenskih košarkaših, ki so nas zastopali na letošnjem evropskem prvenstvu (2017) in ti podatki bodo vsebovani v prvi tabeli. Vsaka vrstica bo dodeljena enemu igralcu, v stolpcih pa bodo njegovi podatki o:
 * številka dresa
