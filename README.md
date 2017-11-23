@@ -21,6 +21,7 @@ Tretja tabela bo po vrsticah imela vsako državo, ki je prejela na evropskem prv
 
 V četrti tabeli se bom posvetila najboljšim igralcem prvenstev. Za vsako leto (vrstice), bo tabela vsebovala MVP-ja (najkoristnejšega igralca) in pa igralca, ki je določeno prvenstvo v povprečju dal največ točk. 
 
+S to nalogo poskusam ugotoviti, katere države so bile najbolj uspešne na evropskih prvenstvih, teh kateri so njboljši košarkaši evrope in od kod prihajajo.
 ## Program
 
 Glavni program in poročilo se nahajata v datoteki `projekt.Rmd`. Ko ga prevedemo,
