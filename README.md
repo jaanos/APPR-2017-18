@@ -15,6 +15,7 @@ Tabele:
 * tabela 3: država, religija, leto, delež ljudi na pragu revščine
 * tabela 4: država, religija, leto, število ločitev na 1000 ljudi
 * tabela 5: država, religija, leto, BDP per capita po kupni moči
+Analizirana leta: 1990-2015
 
 Viri tabel
 * rodnost, izobrazba, BDP: http://databank.worldbank.org/data/reports.aspx?Code=NY.GDP.PCAP.CD&id=1ff4a498&report_name=Popular-Indicators&populartype=series&ispopular=y
