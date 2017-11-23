@@ -8,12 +8,13 @@ V svoji projektni nalogi bom preučila vplive šestih svetovnih religij na sedem
 
 Države, ki jih bom preučevala, sem izbrala tako, da v čim večji meri zastopajo določeno religijo oz. čim večji delež prebivalstva pripada tej veri. Tako sem kot predstavnico katolištva izbrala Italijo, protestantizma Veliko Britanijo, pravoslavcev Romunijo, islam zastopa Iran, hinduizem seveda Indija in budizem Tajska. Kot predstavnico neverujočih sem določila Kitajsko, saj se je po raziskavi iz leta 2014 kar 90 % prebivalstva opredelilo kot ateist ali neverujoči.
 
-Vplive religij bom analizirala skozi naslednje indikatorje:
-* rodnost
-* izobrazba
-* revščina
-* ločitve
-* BDP per capita po kupni moči
+Tabele:
+
+* tabela 1: država, religija, leto, rodnost
+* tabela 2: država, religija, leto, izobrazba(obvezna leta šolanja)
+* tabela 3: država, religija, leto, delež ljudi na pragu revščine
+* tabela 4: država, religija, leto, število ločitev na 1000 ljudi
+* tabela 5: država, religija, leto, BDP per capita po kupni moči
 
 Viri tabel
 * rodnost, izobrazba, BDP: http://databank.worldbank.org/data/reports.aspx?Code=NY.GDP.PCAP.CD&id=1ff4a498&report_name=Popular-Indicators&populartype=series&ispopular=y
