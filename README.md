@@ -4,24 +4,9 @@ Repozitorij z gradivi pri predmetu APPR v študijskem letu 2017/18
 
 ## Tematika
 
-Odločila sem se, da bom analizirala slovenske košarkaše na letošnjem evropskem prvenstvu in evropska košarkaška prvenstva. Za to temo sem se odločila, saj me košarka že od vedno zanima, letos pa smo postali še evropski prvaki. Podatke sem dobila na:
-* http://www.kzs.si/tekmovanja-in-projekti/reprezentance/clani/zgodovina/2017/
-* https://sl.m.wikipedia.org/wiki/Evropsko_prvenstvo_v_košarki
+Izbrali si boste temo, s katero se bo vaš projekt ukvarjal. Tukaj boste
+napisali, kje ste dobili podatke, ter kakšen je vaš cilj.
 
-Prva povezava vsebuje podatke o slovenskih košarkaših, ki so nas zastopali na letošnjem evropskem prvenstvu (2017) in ti podatki bodo vsebovani v prvi tabeli. Vsaka vrstica bo dodeljena enemu igralcu, v stolpcih pa bodo njegovi podatki o:
-* številka dresa
-* poziciji, ki jo igra
-* višini
-* datumu rojstva
-* ekipi, v kateri igra
-
-Druga tabela pa se bo nanašala na evropska prvenstva. Po vrsticah bodo leta evropskih prvenstev, vse od začetka leta 1935, pa do letošnjega prvenstva (2017). Vrstice bodo vsebovale državo v kateri se je evropsko prvenstvo izvajalo, potem pa še za vsako leto države, ki so osvojile prvo, drugo, tretje in četrto mesto. 
-
-Tretja tabela bo po vrsticah imela vsako državo, ki je prejela na evropskem prvenstvu medaljo, v stolpcih pa bo pisalo koliko zlatih, srebnih ali bronastih je dobila. S pomočjo te tabele bom tudi naredila graf/zemljevid, kjer bom označila katere države so v zgodovini prejele največ medalj. 
-
-V četrti tabeli se bom posvetila najboljšim igralcem prvenstev. Za vsako leto (vrstice), bo tabela vsebovala MVP-ja (najkoristnejšega igralca) in pa igralca, ki je določeno prvenstvo v povprečju dal največ točk. 
-
-S to nalogo poskusam ugotoviti, katere države so bile najbolj uspešne na evropskih prvenstvih, teh kateri so njboljši košarkaši evrope in od kod prihajajo.
 ## Program
 
 Glavni program in poročilo se nahajata v datoteki `projekt.Rmd`. Ko ga prevedemo,
