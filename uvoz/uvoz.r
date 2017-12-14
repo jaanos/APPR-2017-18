@@ -1,54 +1,51 @@
 # 2. faza: Uvoz podatkov
 
-sl <- locale("sl", decimal_mark = ",", grouping_mark = ".")
+library(readr)
+library(dplyr)
+library(tidyr)
 
-# Funkcija, ki uvozi občine iz Wikipedije
-uvozi.obcine <- function() {
-  link <- "http://sl.wikipedia.org/wiki/Seznam_ob%C4%8Din_v_Sloveniji"
-  stran <- html_session(link) %>% read_html()
-  tabela <- stran %>% html_nodes(xpath="//table[@class='wikitable sortable']") %>%
-    .[[1]] %>% html_table(dec = ",")
-  for (i in 1:ncol(tabela)) {
-    if (is.character(tabela[[i]])) {
-      Encoding(tabela[[i]]) <- "UTF-8"
-    }
-  }
-  colnames(tabela) <- c("obcina", "povrsina", "prebivalci", "gostota", "naselja",
-                        "ustanovitev", "pokrajina", "regija", "odcepitev")
-  tabela$obcina <- gsub("Slovenskih", "Slov.", tabela$obcina)
-  tabela$obcina[tabela$obcina == "Kanal ob Soči"] <- "Kanal"
-  tabela$obcina[tabela$obcina == "Loški potok"] <- "Loški Potok"
-  for (col in c("povrsina", "prebivalci", "gostota", "naselja", "ustanovitev")) {
-    tabela[[col]] <- parse_number(tabela[[col]], na = "-", locale = sl)
-  }
-  for (col in c("obcina", "pokrajina", "regija")) {
-    tabela[[col]] <- factor(tabela[[col]])
-  }
-  return(tabela)
-}
+#tabela z bdp
+stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+bdp <- read_csv("podatki/podatki.csv",
+                locale = locale(encoding = "cp1250"),
+                col_names = stolpci,
+                skip = 8, n_max = 7)
+bdp$koda <- NULL
+bdp$kratica <- NULL
+bdp$meritev <- NULL
+bdp <- melt(bdp, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
 
-# Funkcija, ki uvozi podatke iz datoteke druzine.csv
-uvozi.druzine <- function(obcine) {
-  data <- read_csv2("podatki/druzine.csv", col_names = c("obcina", 1:4),
-                    locale = locale(encoding = "Windows-1250"))
-  data$obcina <- data$obcina %>% strapplyc("^([^/]*)") %>% unlist() %>%
-    strapplyc("([^ ]+)") %>% sapply(paste, collapse = " ") %>% unlist()
-  data$obcina[data$obcina == "Sveti Jurij"] <- "Sveti Jurij ob Ščavnici"
-  data <- data %>% melt(id.vars = "obcina", variable.name = "velikost.druzine",
-                        value.name = "stevilo.druzin")
-  data$velikost.druzine <- parse_number(data$velikost.druzine)
-  data$obcina <- factor(data$obcina, levels = obcine)
-  return(data)
-}
+#tabela z vladnimi izdatki
+stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+vlada <- read_csv("podatki/podatki.csv",
+                  locale = locale(encoding = "cp1250"),
+                  col_names = stolpci,
+                  skip = 15, n_max = 7,
+                  na = "..")
+vlada$koda <- NULL
+vlada$kratica <- NULL
+vlada$meritev <- NULL
+vlada <- melt(vlada, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
 
-# Zapišimo podatke v razpredelnico obcine
-obcine <- uvozi.obcine()
+#tabela z rodnostjo
+stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+rodnost <- read_csv("podatki/podatki.csv",
+                    locale = locale(encoding = "cp1250"),
+                    col_names = stolpci,
+                    skip = 22, n_max = 7)
+rodnost$koda <- NULL
+rodnost$kratica <- NULL
+rodnost$meritev <- NULL
+rodnost <- melt(rodnost, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
 
-# Zapišimo podatke v razpredelnico druzine.
-druzine <- uvozi.druzine(levels(obcine$obcina))
-
-# Če bi imeli več funkcij za uvoz in nekaterih npr. še ne bi
-# potrebovali v 3. fazi, bi bilo smiselno funkcije dati v svojo
-# datoteko, tukaj pa bi klicali tiste, ki jih potrebujemo v
-# 2. fazi. Seveda bi morali ustrezno datoteko uvoziti v prihodnjih
-# fazah.
+#tabela s podatki o kontracepciji
+stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+kontracepcija <- read_csv("podatki/podatki.csv",
+                          locale = locale(encoding = "cp1250"),
+                          col_names = stolpci,
+                          skip = 29, n_max = 7,
+                          na = "..")
+kontracepcija$koda <- NULL
+kontracepcija$kratica <- NULL
+kontracepcija$meritev <- NULL
+kontracepcija <- melt(kontracepcija, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
