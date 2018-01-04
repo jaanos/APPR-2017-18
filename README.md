@@ -20,7 +20,8 @@ Analizirana leta: 1990-2015
 
 Viri tabel
 * rodnost, izobrazba, BDP: http://databank.worldbank.org/data/reports.aspx?Code=NY.GDP.PCAP.CD&id=1ff4a498&report_name=Popular-Indicators&populartype=series&ispopular=y
-* ločitve: https://en.wikipedia.org/wiki/Divorce_demography
+* ločitve: https://en.wikipedia.org/wiki/Divorce_demography, http://ec.europa.eu/eurostat/statistics-explained/index.php/File:Crude_divorce_rate,_selected_years,_1960-2015_(per_1_000_persons).png
+
 
 ## Program
 
