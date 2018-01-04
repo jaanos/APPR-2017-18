@@ -1,9 +1,11 @@
 library(readr)
 library(dplyr)
 library(tidyr)
+library(magrittr)
+library(XML)
 
 #tabela z bdp
-stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+stolpci <- c("meritev", "koda", "drzava", "kratica", 1990:2015)
 bdp <- read_csv("podatki/podatki.csv",
                 locale = locale(encoding = "cp1250"),
                 col_names = stolpci,
@@ -11,10 +13,10 @@ bdp <- read_csv("podatki/podatki.csv",
 bdp$koda <- NULL
 bdp$kratica <- NULL
 bdp$meritev <- NULL
-bdp <- melt(bdp, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
+bdp <- melt(bdp, id.vars = "drzava", variable.name = "leto", value.name = "vrednosti")
 
 #tabela z vladnimi izdatki
-stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+stolpci <- c("meritev", "koda", "drzava", "kratica", 1990:2015)
 vlada <- read_csv("podatki/podatki.csv",
                   locale = locale(encoding = "cp1250"),
                   col_names = stolpci,
@@ -23,10 +25,10 @@ vlada <- read_csv("podatki/podatki.csv",
 vlada$koda <- NULL
 vlada$kratica <- NULL
 vlada$meritev <- NULL
-vlada <- melt(vlada, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
+vlada <- melt(vlada, id.vars = "drzava", variable.name = "leto", value.name = "vrednosti")
 
 #tabela z rodnostjo
-stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+stolpci <- c("meritev", "koda", "drzava", "kratica", 1990:2015)
 rodnost <- read_csv("podatki/podatki.csv",
                 locale = locale(encoding = "cp1250"),
                 col_names = stolpci,
@@ -34,10 +36,10 @@ rodnost <- read_csv("podatki/podatki.csv",
 rodnost$koda <- NULL
 rodnost$kratica <- NULL
 rodnost$meritev <- NULL
-rodnost <- melt(rodnost, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
+rodnost <- melt(rodnost, id.vars = "drzava", variable.name = "leto", value.name = "vrednosti")
 
 #tabela s podatki o kontracepciji
-stolpci <- c("meritev", "koda", "država", "kratica", 1990:2015)
+stolpci <- c("meritev", "koda", "drzava", "kratica", 1990:2015)
 kontracepcija <- read_csv("podatki/podatki.csv",
                     locale = locale(encoding = "cp1250"),
                     col_names = stolpci,
@@ -46,5 +48,22 @@ kontracepcija <- read_csv("podatki/podatki.csv",
 kontracepcija$koda <- NULL
 kontracepcija$kratica <- NULL
 kontracepcija$meritev <- NULL
-kontracepcija <- melt(kontracepcija, id.vars = "država", variable.name = "leto", value.name = "vrednosti")
-View(kontracepcija)
+kontracepcija <- melt(kontracepcija, id.vars = "drzava", variable.name = "leto", value.name = "vrednosti")
+
+#tabela z locitvami
+link <- "https://en.wikipedia.org/wiki/Divorce_demography"
+stran <- html_session(link) %>% read_html()
+tabela <- stran %>% html_nodes(xpath="//table[@class='wikitable sortable']") %>%
+  .[[1]] %>% html_table(dec = ",")
+colnames(tabela) <- c("drzava", "poroka", "locitev", "delez", "leto.podatka")
+sl <- locale("sl", decimal_mark = ",", grouping_mark = ".")
+for (col in c("poroka", "locitev", "delez", "leto.podatka")) {
+  tabela[[col]] <- parse_number(tabela[[col]], na = "-", locale = sl)
+}
+locitev <- subset(tabela, drzava == "China" |
+                    drzava == "Iran" |
+                    drzava == "Italy" |
+                    drzava == "United Kingdom" |
+                    drzava == "Romania" |
+                    drzava == "Thailand")
+locitev$leto.podatka <- NULL
